@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.brightfunds.org/.well-known/openid-configuration
+docs: https://www.brightfunds.org/.well-known/openid-configuration
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode, clientCredentials, implicit]
+  oidc: true
+  issuer: https://www.brightfunds.org/
+schemes:
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://www.brightfunds.org/.well-known/openid-configuration
+  sources: [well-known/bright-funds-openid-configuration.json]
+- name: OAuth2
+  type: oauth2
+  issuer: https://www.brightfunds.org/
+  authorizationUrl: https://www.brightfunds.org/oauth/authorize
+  tokenUrl: https://www.brightfunds.org/oauth/token
+  revocationUrl: https://www.brightfunds.org/oauth/revoke
+  introspectionUrl: https://www.brightfunds.org/oauth/introspect
+  userinfoUrl: https://www.brightfunds.org/oauth/userinfo
+  jwksUrl: https://www.brightfunds.org/oauth/discovery/keys
+  flows: [authorizationCode, clientCredentials, implicit, refreshToken]
+  token_endpoint_auth_methods: [client_secret_basic, client_secret_post]
+  id_token_signing_alg: [RS256]
+  subject_types: [pairwise]
+  sources: [well-known/bright-funds-oauth-authorization-server.json]
+notes: >-
+  Discovered from the live OIDC/OAuth 2.0 authorization-server metadata; no public OpenAPI or
+  developer portal documents the API surface, so schemes are captured from discovery rather than
+  derived from a spec.
