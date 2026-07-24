@@ -1,8 +1,15 @@
 aid: bright-funds
 name: Bright Funds
-description: Bright Funds is a company surfaced as a portfolio company of bloomberg-beta and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Bright Funds is a workplace-giving, corporate grants, and employee volunteering platform (now
+  part of Submittable) that lets employers run donation, matching-gift, and volunteering programs
+  for their employees and route funds to vetted nonprofits. The platform operates a live OpenID
+  Connect / OAuth 2.0 authorization server at www.brightfunds.org for single sign-on and API
+  integrations (authorization_code, client_credentials, and refresh_token grants; RS256 id_tokens;
+  openid/profile/email/write/update scopes). It publishes a PGP-signed security.txt but no
+  standalone developer portal or OpenAPI specification. Surfaced as a portfolio company of
+  Bloomberg Beta and enriched into the API Evangelist network from its public identity and
+  well-known discovery surface.
 url: https://raw.githubusercontent.com/api-evangelist/bright-funds/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +17,33 @@ x-backed-by:
 - bloomberg-beta
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://cdn.prod.website-files.com/64c3f11f46b35cb5f865c514/66994cfea9422c379d8041d9_BrightFunds_Icon_Webflow-256.png
 tags:
 - Company
+- Workplace Giving
+- Corporate Social Responsibility
+- Employee Engagement
+- Nonprofits
+- Grants Management
+- Donations
+- Volunteering
+- OAuth
+- OpenID Connect
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +53,38 @@ maintainers:
 common:
 - type: Website
   url: https://www.brightfunds.org/
+- type: DeveloperPortal
+  url: https://hello.brightfunds.org/
+- type: Login
+  url: https://www.brightfunds.org/login/
+- type: Support
+  url: https://www.brightfunds.org/faq/
+- type: Blog
+  url: https://www.brightfunds.org/blog/
+- type: TermsOfService
+  url: https://www.brightfunds.org/terms/
+- type: PrivacyPolicy
+  url: https://www.brightfunds.org/privacy_policy/
+- type: Authentication
+  url: authentication/bright-funds-authentication.yml
+- type: OAuthScopes
+  url: scopes/bright-funds-scopes.yml
+- type: WellKnown
+  url: well-known/bright-funds-well-known.yml
+- type: SecurityTxt
+  url: well-known/bright-funds-security.txt
+- type: Conformance
+  url: conformance/bright-funds-conformance.yml
+- type: DomainSecurity
+  url: security/bright-funds-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/bright-funds-vulnerability-disclosure.yml
+- type: Security
+  url: well-known/bright-funds-security.txt
+- type: LLMsTxt
+  url: llms/bright-funds-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

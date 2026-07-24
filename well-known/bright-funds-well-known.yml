@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.brightfunds.org/.well-known/
+host: https://www.brightfunds.org
+documents:
+- path: /.well-known/security.txt          # RFC 9116 (PGP-signed; Expires field lapsed 2022-09-18)
+  status: 200
+  file: bright-funds-security.txt
+- path: /.well-known/openid-configuration   # OpenID Connect Discovery 1.0
+  status: 200
+  file: bright-funds-openid-configuration.json
+- path: /.well-known/oauth-authorization-server  # RFC 8414 (identical payload to openid-configuration)
+  status: 200
+  file: bright-funds-oauth-authorization-server.json
+- path: /.well-known/api-catalog             # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  www.brightfunds.org publishes a live OpenID Connect / OAuth 2.0 authorization-server
+  discovery surface (issuer https://www.brightfunds.org/, RS256 id_tokens, authorization_code +
+  client_credentials + refresh_token grants). The security.txt is PGP-signed but its Expires
+  field lapsed 2022-09-18. The marketing site (hello.brightfunds.org) returns 404 for all
+  .well-known paths; only the www application host serves them.

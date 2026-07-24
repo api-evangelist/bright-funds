@@ -1,0 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@brightfunds.org
+Expires: 2022-09-18T06:00:00.000Z
+Encryption: https://www.brightfunds.org/bright_funds_public_key.asc
+Preferred-Languages: en
+Canonical: https://www.brightfunds.org/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQFJBAEBCAAzFiEEvRPO6xqm7qs/9ygW46l13Ro+pcYFAmE6V1sVHHRlYW1AYnJp
+Z2h0ZnVuZHMub3JnAAoJEOOpdd0aPqXG5eQIALr9g6r7U4DkdnRvKZ9eD+PhypJ3
+mdSFMiI0LjNRWzW92klCFy3M+UOYCPKjcGu7F0I0hj3WKlTDazGQly+hjxiE0z0f
+2zGVQYSu1oTtAowROrMyfMUkn4NPMg6pB47zu+NbPgzA/sfFR0wTNNjheQq6HJHB
+ZgHeMeBKwRzd15+p4fjtoUMC7kle0mzptCtGzmcbc/8e5xU78g3EgpmxZAQvgC09
+nH7/72+8qBcK81gBM7cGPgTjlQJV3XED8rvk5Zozix4DTRBs4JkfO1u41dQaQm91
+fXtHtBcZs2Mdh1sb/+pyG5OJQOWDl7Lc4jZ9QQkbWJq3sna7TgvlMgLedQE=
+=ac9S
+-----END PGP SIGNATURE-----

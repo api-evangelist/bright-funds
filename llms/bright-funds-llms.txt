@@ -1,0 +1,35 @@
+# Bright Funds
+
+> Bright Funds (now part of Submittable) is a workplace-giving, corporate grants, and employee volunteering platform used by employers to run donation, matching-gift, and volunteering programs for their employees, routing funds to vetted nonprofits. The platform exposes a live OpenID Connect / OAuth 2.0 authorization server at www.brightfunds.org for single sign-on and API integrations, though it publishes no standalone developer portal or OpenAPI specification.
+
+## Identity & Auth
+- OpenID Connect Discovery: https://www.brightfunds.org/.well-known/openid-configuration
+- OAuth 2.0 Authorization Server Metadata (RFC 8414): https://www.brightfunds.org/.well-known/oauth-authorization-server
+- Authorization endpoint: https://www.brightfunds.org/oauth/authorize
+- Token endpoint: https://www.brightfunds.org/oauth/token
+- UserInfo endpoint: https://www.brightfunds.org/oauth/userinfo
+- JWKS: https://www.brightfunds.org/oauth/discovery/keys
+- Scopes: openid, profile, email, name, offline_access, write, update
+- Grants: authorization_code, client_credentials, implicit_oidc, refresh_token
+
+## Site
+- Company site: https://hello.brightfunds.org/
+- Log in: https://www.brightfunds.org/login/
+- FAQ / technical support: https://www.brightfunds.org/faq/
+- Blog: https://www.brightfunds.org/blog/
+- Terms & Conditions: https://www.brightfunds.org/terms/
+- Privacy Policy: https://www.brightfunds.org/privacy_policy/
+- security.txt: https://www.brightfunds.org/.well-known/security.txt (contact security@brightfunds.org)
+
+## Repo artifacts
+- APIs.json catalog entry: https://raw.githubusercontent.com/api-evangelist/bright-funds/refs/heads/main/apis.yml
+- Authentication profile: authentication/bright-funds-authentication.yml
+- OAuth scopes: scopes/bright-funds-scopes.yml
+- Well-known index: well-known/bright-funds-well-known.yml
+- Conformance: conformance/bright-funds-conformance.yml
+- Domain security: security/bright-funds-domain-security.yml
+- Vulnerability disclosure: security/bright-funds-vulnerability-disclosure.yml
+
+## Notes
+- Bright Funds was acquired by Submittable; www.brightfunds.org redirects the marketing site to hello.brightfunds.org and legal/support pages resolve to Submittable-branded pages.
+- No public OpenAPI, SDK packages, CLI, MCP server, or webhook/AsyncAPI surface was found; those artifacts are intentionally omitted rather than fabricated.

@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.brightfunds.org/.well-known/openid-configuration
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Live RFC 8414 authorization-server metadata at /.well-known/oauth-authorization-server
+    (authorize/token/revoke/introspect endpoints, authorization_code + client_credentials +
+    refresh_token grants).
+- id: oidc
+  conforms: true
+  evidence: >-
+    OpenID Connect Discovery 1.0 document at /.well-known/openid-configuration (userinfo endpoint,
+    RS256 id_token signing, jwks_uri, standard openid/profile/email scopes and claims).
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: >-
+    PGP-signed /.well-known/security.txt with Contact and Canonical fields (Expires field lapsed
+    2022-09-18).
+- id: rfc8414-oauth-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with issuer + endpoint metadata.
+- id: rfc9727-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No published OpenAPI or error reference to confirm application/problem+json usage.

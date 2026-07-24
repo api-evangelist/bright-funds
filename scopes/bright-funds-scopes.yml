@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.brightfunds.org/.well-known/openid-configuration
+docs: https://www.brightfunds.org/.well-known/openid-configuration
+schemes:
+- name: OAuth2
+  source: well-known/bright-funds-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.brightfunds.org/oauth/authorize
+    tokenUrl: https://www.brightfunds.org/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://www.brightfunds.org/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an id_token for the subject.
+  flows: [authorizationCode]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: profile
+  description: Access the user's profile claims (name, given_name, family_name, zoneinfo, updated_at).
+  flows: [authorizationCode]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: email
+  description: Access the user's email claim.
+  flows: [authorizationCode]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: name
+  description: Access the user's name claim.
+  flows: [authorizationCode]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: offline_access
+  description: Issue a refresh_token for long-lived access without the user present.
+  flows: [authorizationCode]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: write
+  description: Write access to the Bright Funds platform resources.
+  flows: [authorizationCode, clientCredentials]
+  sources: [well-known/bright-funds-openid-configuration.json]
+- scope: update
+  description: Update access to the Bright Funds platform resources.
+  flows: [authorizationCode, clientCredentials]
+  sources: [well-known/bright-funds-openid-configuration.json]
+notes: >-
+  Scopes are taken verbatim from the published scopes_supported list in the OIDC discovery
+  document. Flow-to-scope mapping is inferred (the discovery doc does not per-scope-map flows);
+  standard OIDC scopes bind to the authorization_code flow.
