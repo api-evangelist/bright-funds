@@ -29,7 +29,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
 image: https://cdn.prod.website-files.com/64c3f11f46b35cb5f865c514/66994cfea9422c379d8041d9_BrightFunds_Icon_Webflow-256.png
